@@ -4,6 +4,8 @@ if not fs.exists("loader/") then
     shell.run("mkdir", "loader")
     shell.setDir("loader")
     shell.run("wget", "https://tomquinn04.github.io/ccprojects/loader/loader")
+    loader = require("loader/loader")
+    loader.initialsetup()
     shell.run("loader")
 else
     print("SETUP has already been run. Please delete setup")

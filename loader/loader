@@ -47,8 +47,8 @@ function updateloader()
 end
 -- MAIN
 
-if not fs.exists("loader/initfiles") then initialsetup() end
-
 utilities.update()
 updateloader()
 runprogram()
+
+return {initialsetup = initialsetup}
