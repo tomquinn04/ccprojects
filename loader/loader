@@ -50,9 +50,9 @@ end
 -- MAIN
 
 utilities = require("utilities")
-if not args[1] == "noupall" then
+if (not args[1] == "noupall" ) or (#args==0) then
     utilities.update()
-    if not args[1] == "noup" then updateloader() end
+    if (not args[1] == "noup") or (#args==0) then updateloader() end
 end
 runprogram()
 
