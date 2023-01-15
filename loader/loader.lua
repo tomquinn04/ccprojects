@@ -8,7 +8,7 @@ function initialsetup()
         if not shell.dir() == "loader" then shell.setDir("loader") end
 
         shell.run("rm", "../setup.lua")
-        shell.run("wget", "https://raw.githubusercontent.com/tomquinn04/ccprojects/main/loader/initfiles")
+        shell.run("wget", "https://tomquinn04.github.io/ccprojects/loader/initfiles")
         
         os.loadAPI("initfiles")
         dl = initfiles.get()

@@ -2,9 +2,9 @@
 -- list of files downloaded when running initialsetup()
 
 files = [
-    "https://https://raw.githubusercontent.com/tomquinn04/ccprojects/main/loader/config.lua",
-    "https://https://raw.githubusercontent.com/tomquinn04/ccprojects/main/loader/programs.lua",
-    "https://https://raw.githubusercontent.com/tomquinn04/ccprojects/main/loader/utilities.lua",
+    "https://https://tomquinn04.github.io/ccprojects/loader/config.lua",
+    "https://https://tomquinn04.github.io/ccprojects/loader/programs.lua",
+    "https://https://tomquinn04.github.io/ccprojects/loader/utilities.lua",
 ]
 
 function get()

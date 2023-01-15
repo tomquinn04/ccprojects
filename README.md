@@ -1,2 +1,2 @@
 # ccprojects
-`wget https://raw.githubusercontent.com/tomquinn04/ccprojects/main/setup.lua`
+`wget https://tomquinn04.github.io/ccprojects/setup.lua`
