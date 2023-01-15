@@ -1,0 +1,8 @@
+-- Program Definition File
+
+name = "treefarm"
+directory = "treefarm"
+files = {
+    "https://tomquinn04.github.io/ccprojects/treefarm/def",
+}
+startup = "treefarm"
