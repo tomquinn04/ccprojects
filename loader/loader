@@ -32,8 +32,19 @@ function runprogram()
     shell.setDir(program)
     utilities.dllist(def.files)
     utilities.runonce(def.runonce, def.runonceargs)
+end
 
+function updateloader()
+    if fs.exists("loader/update") then
+        shell.run("rm", "loader")
+        shell.run("mv", "update loader")
+    else
+        shell.run("wget", "https://tomquinn04.github.io/ccprojects/loader/loader -O update")
+        updateloader()
+    end
+end
 -- MAIN
 
 if not fs.exists("loader/initfiles") then initialsetup() end
-
+updateloader()
+runprogram()
