@@ -31,4 +31,4 @@ function update()
     end
 end
 
-return {runonce = runonce, dllist = dllist, update = update}
+return {runonce = runonce, dllist = dllist, update = update, dellist = dellist}
