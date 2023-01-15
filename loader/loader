@@ -4,7 +4,7 @@
 
 if not shell.dir() == "loader" then shell.setDir("loader") end
 
-require "utilities"
+utilities = require("utilities")
 
 function initialsetup()
     print("Performing initial setup")

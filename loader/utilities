@@ -24,4 +24,4 @@ function update()
     end
 end
 
-return self
+return {runonce = runonce, dllist = dllist, update = update}
