@@ -31,8 +31,10 @@ function runprogram()
     end
     os.loadAPI(vprogram.."/def")
     shell.setDir(vprogram)
+    utilities.dellist(def.updatefiles)
     utilities.dllist(def.files)
-    utilities.runonce(program.."/"..def.runonce, def.runonceargs)
+    utilities.runonce(vprogram.."/"..def.runonce, def.runonceargs)
+    shell.run(vprogram.."/"..def.startup)
 end
 
 function updateloader()
@@ -50,7 +52,7 @@ end
 utilities = require("utilities")
 if not args[1] == "noupall" then
     utilities.update()
-    if not args[1] = "noup" then updateloader() end
+    if not args[1] == "noup" then updateloader() end
 end
 runprogram()
 

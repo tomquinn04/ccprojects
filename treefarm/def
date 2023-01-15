@@ -8,6 +8,12 @@ files = {
     "https://tomquinn04.github.io/ccprojects/treefarm/move",
     "https://tomquinn04.github.io/ccprojects/treefarm/treefarm"
 }
+updatefiles = {
+    "def",
+    "initpos",
+    "move",
+    "treefarm"
+}
 runonce = "initpos"
 runonceargs = " "
 startup = "treefarm"

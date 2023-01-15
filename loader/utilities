@@ -2,9 +2,15 @@
 
 function runonce(file, args)
     if not fs.exists(file..".runonceflg") then
-        flg = fs.open(file..".runonceflg", write)
+        flg = fs.open(file..".runonceflg", "w")
         flg.close()
         shell.run(file, args)
+    end
+end
+
+function dellist(list)
+    for i,fn in ipairs(list) do
+        shell.run("rm", fn)
     end
 end
 
