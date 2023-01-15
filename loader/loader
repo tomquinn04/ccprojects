@@ -2,20 +2,28 @@
 
 -- VARIABLES
 
+if not shell.dir() == "loader" then shell.setDir("loader") end
 
 function initialsetup()
+    print("Performing initial setup")
     if not fs.exists("loader/config") then
-        if not shell.dir() == "loader" then shell.setDir("loader") end
 
-        shell.run("rm", "../setup.lua")
+        shell.run("rm", "../setup")
         shell.run("wget", "https://tomquinn04.github.io/ccprojects/loader/initfiles")
         
         os.loadAPI("initfiles")
         dl = initfiles.get()
 
-        for fn in dl do
+        for i,fn in ipairs(dl) do
             shell.run("wget", fn)
         end
     end
 
 end
+
+
+
+-- MAIN
+
+if not fs.exists("initfiles") then initialsetup() end
+

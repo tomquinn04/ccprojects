@@ -1,0 +1,12 @@
+-- loader/initfiles
+-- list of files downloaded when running initialsetup()
+
+files = [
+    "https://https://tomquinn04.github.io/ccprojects/loader/config",
+    "https://https://tomquinn04.github.io/ccprojects/loader/programs",
+    "https://https://tomquinn04.github.io/ccprojects/loader/utilities",
+]
+
+function get()
+    return files
+end

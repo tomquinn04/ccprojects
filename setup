@@ -1,0 +1,9 @@
+-- setup
+if not fs.exists("loader/") then
+    shell.run("mkdir", "loader")
+    shell.setDir("loader")
+    shell.run("wget", "https://tomquinn04.github.io/ccprojects/loader/loader")
+    shell.run("loader")
+else
+    print("SETUP has already been run. Please delete setup")
+end
