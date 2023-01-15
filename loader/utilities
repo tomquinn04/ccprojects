@@ -15,6 +15,7 @@ function dllist(list)
 end
 
 function update()
+    shell.setDir("loader")
     if fs.exists("loader/utilities.update") then
         shell.run("rm", "utilities")
         shell.run("mv", "utilities.update utilities")
