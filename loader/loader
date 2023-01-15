@@ -31,15 +31,15 @@ function runprogram()
     os.loadAPI(program.."/def")
     shell.setDir(program)
     utilities.dllist(def.files)
-    utilities.runonce(def.runonce, def.runonceargs)
+    utilities.runonce(config.file.."/"..def.runonce, def.runonceargs)
 end
 
 function updateloader()
-    if fs.exists("loader/update") then
+    if fs.exists("loader/loader.update") then
         shell.run("rm", "loader")
-        shell.run("mv", "update loader")
+        shell.run("mv", "loader.update loader")
     else
-        shell.run("wget", "https://tomquinn04.github.io/ccprojects/loader/loader update")
+        shell.run("wget", "https://tomquinn04.github.io/ccprojects/loader/loader loader.update")
         updateloader()
     end
 end
@@ -47,4 +47,7 @@ end
 
 if not fs.exists("loader/initfiles") then initialsetup() end
 updateloader()
+os.loadAPI("loader/utilities")
+utilities.update()
+os.unloadAPI("loader/utilities")
 runprogram()

@@ -12,3 +12,13 @@ function dllist(list)
         shell.run("wget", fn)
     end
 end
+
+function update()
+    if fs.exists("loader/utilities.update") then
+        shell.run("rm", "utilities")
+        shell.run("mv", "utilities.update utilities")
+    else
+        shell.run("wget", "https://tomquinn04.github.io/ccprojects/loader/utilities utilities.update")
+        update()
+    end
+end
