@@ -25,5 +25,5 @@ end
 
 -- MAIN
 
-if not fs.exists("initfiles") then initialsetup() end
+if not fs.exists("loader/initfiles") then initialsetup() end
 
