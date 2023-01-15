@@ -38,7 +38,7 @@ function runprogram()
 end
 
 function updateloader()
-    shell.setdir("loader")
+    shell.setDir("loader")
     if fs.exists("loader/loader.update") then
         shell.run("rm", "loader")
         shell.run("mv", "loader.update loader")
