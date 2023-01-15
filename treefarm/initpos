@@ -1,2 +1,2 @@
 -- Initialise pos.tbl file
-
+package.path="/?;/?.lua;"..package.path

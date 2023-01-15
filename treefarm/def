@@ -1,5 +1,5 @@
 -- Program Definition File
-
+package.path="/?;/?.lua;"..package.path
 name = "treefarm"
 directory = "treefarm"
 files = {

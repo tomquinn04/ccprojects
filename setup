@@ -1,4 +1,5 @@
 -- setup
+package.path="/?;/?.lua;"..package.path
 if not fs.exists("loader/") then
     shell.run("mkdir", "loader")
     shell.setDir("loader")

@@ -1,1 +1,2 @@
+package.path="/?;/?.lua;"..package.path
 print("treefarm")

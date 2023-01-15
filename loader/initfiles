@@ -1,6 +1,6 @@
 -- loader/initfiles
 -- list of files downloaded when running initialsetup()
-
+package.path="/?;/?.lua;"..package.path
 files = { 
     "https://tomquinn04.github.io/ccprojects/loader/config",
     "https://tomquinn04.github.io/ccprojects/loader/programs",
