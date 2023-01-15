@@ -1,0 +1,41 @@
+-- Movement API
+
+function forward(n)
+    pos = fload("pos.tbl")
+    
+end
+
+function back(n)
+
+end
+
+function left(n)
+
+end
+
+function right(n)
+
+end
+
+function up(n)
+
+end
+
+function down (n)
+
+end
+
+-- File API
+
+function fsave(table,name)
+    local file = fs.open(name,"w")
+    file.write(textutils.serialize(table))
+    file.close()
+end
+     
+function fload(name)
+    local file = fs.open(name,"r")
+    local data = file.readAll()
+    file.close()
+    return textutils.unserialize(data)
+end

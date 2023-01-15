@@ -17,11 +17,19 @@ function initialsetup()
         for i,fn in ipairs(dl) do
             shell.run("wget", fn)
         end
+        os.unloadAPI("loader/initfiles")
     end
 
 end
 
-
+function runprogram()
+    os.loadAPI("loader/config")
+    program = config.file
+    os.unloadAPI("loader/config")
+    
+    os.loadAPI("loader/utilities")
+    os.loadAPI(program.."/def")
+    utilities.runonce(def.runonce, def.runonceargs)
 
 -- MAIN
 

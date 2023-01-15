@@ -5,4 +5,6 @@ directory = "treefarm"
 files = {
     "https://tomquinn04.github.io/ccprojects/treefarm/def",
 }
+runonce = "initpos"
+runonceargs = ""
 startup = "treefarm"
