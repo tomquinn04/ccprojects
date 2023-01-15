@@ -1,7 +1,7 @@
 -- loader/loader
 
 -- VARIABLES
-
+args = {...}
 if not shell.dir() == "loader" then shell.setDir("loader") end
 
 
@@ -36,6 +36,7 @@ function runprogram()
 end
 
 function updateloader()
+    shell.setdir("loader")
     if fs.exists("loader/loader.update") then
         shell.run("rm", "loader")
         shell.run("mv", "loader.update loader")
@@ -47,8 +48,10 @@ end
 -- MAIN
 
 utilities = require("utilities")
-utilities.update()
-updateloader()
+if not args[1] == "noupall" then
+    utilities.update()
+    if not args[1] = "noup" then updateloader() end
+end
 runprogram()
 
 return {initialsetup = initialsetup}
