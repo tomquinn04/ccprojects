@@ -27,7 +27,7 @@ function runprogram()
     config = require("config")
     local vprogram = config.getprogram()
     if not fs.exists(vprogram.."/def") then
-        shell.run("wget", "https://tomquinn04.github.io/ccprojects/"..vprogram.."/def")
+        shell.run("wget", "https://tomquinn04.github.io/ccprojects/"..vprogram.."/def /"..vprogram.."/def")
     end
     os.loadAPI(vprogram.."/def")
     shell.setDir(vprogram)
