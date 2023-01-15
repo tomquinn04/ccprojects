@@ -46,8 +46,8 @@ end
 -- MAIN
 
 if not fs.exists("loader/initfiles") then initialsetup() end
-updateloader()
 os.loadAPI("loader/utilities")
 utilities.update()
 os.unloadAPI("loader/utilities")
+updateloader()
 runprogram()

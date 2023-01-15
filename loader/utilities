@@ -2,7 +2,8 @@
 
 function runonce(file, args)
     if not fs.exists(file..".runonceflg") then
-        fs.open(file..".runonceflg", write).close
+        flg = fs.open(file..".runonceflg", write)
+        flg.close()
         shell.run(file, args)
     end
 end
