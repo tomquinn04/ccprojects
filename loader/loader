@@ -3,8 +3,7 @@
 -- VARIABLES
 
 if not shell.dir() == "loader" then shell.setDir("loader") end
-package.path="/?;/?.lua;"..package.path
-utilities = require("loader/utilities")
+
 
 function initialsetup()
     print("Performing initial setup")
@@ -47,6 +46,7 @@ function updateloader()
 end
 -- MAIN
 
+utilities = require("loader/utilities")
 utilities.update()
 updateloader()
 runprogram()

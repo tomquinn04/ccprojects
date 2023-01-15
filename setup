@@ -1,11 +1,25 @@
 -- setup
-package.path="/?;/?.lua;"..package.path
+
 if not fs.exists("loader/") then
     shell.run("mkdir", "loader")
     shell.setDir("loader")
     shell.run("wget", "https://tomquinn04.github.io/ccprojects/loader/loader")
-    loader = require("loader/loader")
-    loader.initialsetup()
+    
+    print("Performing initial setup")
+    if not fs.exists("loader/config") then
+
+        shell.run("rm", "../setup")
+        shell.run("wget", "https://tomquinn04.github.io/ccprojects/loader/initfiles")
+        
+        os.loadAPI("loader/initfiles")
+        dl = initfiles.get()
+
+        for i,fn in ipairs(dl) do
+            shell.run("wget", fn)
+        end
+        os.unloadAPI("loader/initfiles")
+    end
+
     shell.run("loader")
 else
     print("SETUP has already been run. Please delete setup")

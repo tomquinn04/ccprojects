@@ -1,5 +1,5 @@
 -- Movement API
-package.path="/?;/?.lua;"..package.path
+
 function forward(n)
     pos = fload("pos.tbl")
     

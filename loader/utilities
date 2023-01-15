@@ -1,5 +1,5 @@
 -- Utilities File
-package.path="/?;/?.lua;"..package.path
+
 function runonce(file, args)
     if not fs.exists(file..".runonceflg") then
         flg = fs.open(file..".runonceflg", write)
