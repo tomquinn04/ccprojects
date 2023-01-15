@@ -25,14 +25,13 @@ end
 
 function runprogram()
     os.loadAPI("loader/config")
-    program = config.file
+    vprogram = config.file
     os.unloadAPI("loader/config")
     
-    os.loadAPI("loader/utilities")
-    os.loadAPI(program.."/def")
-    shell.setDir(program)
+    os.loadAPI(vprogram.."/def")
+    shell.setDir(vprogram)
     utilities.dllist(def.files)
-    utilities.runonce(config.file.."/"..def.runonce, def.runonceargs)
+    utilities.runonce(program.."/"..def.runonce, def.runonceargs)
 end
 
 function updateloader()
@@ -46,7 +45,7 @@ function updateloader()
 end
 -- MAIN
 
-utilities = require("loader/utilities")
+utilities = require("utilities")
 utilities.update()
 updateloader()
 runprogram()
