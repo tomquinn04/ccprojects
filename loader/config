@@ -2,4 +2,6 @@
 
 program = ""
 
-return { program = program}
+function getprogram() return program end
+
+return { getprogram = getprogram}

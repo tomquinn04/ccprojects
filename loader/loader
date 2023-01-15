@@ -25,7 +25,7 @@ end
 
 function runprogram()
     config = require("config")
-    local vprogram = config.program
+    local vprogram = config.getprogram()
     
     os.loadAPI(vprogram.."/def")
     shell.setDir(vprogram)
