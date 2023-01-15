@@ -39,7 +39,7 @@ function updateloader()
         shell.run("rm", "loader")
         shell.run("mv", "update loader")
     else
-        shell.run("wget", "https://tomquinn04.github.io/ccprojects/loader/loader -O update")
+        shell.run("wget", "https://tomquinn04.github.io/ccprojects/loader/loader update")
         updateloader()
     end
 end
