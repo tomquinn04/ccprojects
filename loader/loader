@@ -4,7 +4,7 @@
 
 if not shell.dir() == "loader" then shell.setDir("loader") end
 package.path="/?;/?.lua;"..package.path
-utilities = require("utilities")
+utilities = require("loader/utilities")
 
 function initialsetup()
     print("Performing initial setup")
@@ -48,6 +48,7 @@ end
 -- MAIN
 
 if not fs.exists("loader/initfiles") then initialsetup() end
+
 utilities.update()
 updateloader()
 runprogram()
