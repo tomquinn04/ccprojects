@@ -4,6 +4,8 @@
 
 if not shell.dir() == "loader" then shell.setDir("loader") end
 
+require "utilities"
+
 function initialsetup()
     print("Performing initial setup")
     if not fs.exists("loader/config") then
@@ -46,8 +48,6 @@ end
 -- MAIN
 
 if not fs.exists("loader/initfiles") then initialsetup() end
-os.loadAPI("loader/utilities")
 utilities.update()
-os.unloadAPI("loader/utilities")
 updateloader()
 runprogram()
