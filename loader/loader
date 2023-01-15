@@ -29,6 +29,8 @@ function runprogram()
     
     os.loadAPI("loader/utilities")
     os.loadAPI(program.."/def")
+    shell.setDir(program)
+    utilities.dllist(def.files)
     utilities.runonce(def.runonce, def.runonceargs)
 
 -- MAIN

@@ -4,3 +4,11 @@ function runonce(file, args)
     if not fs.exists(file..".runonceflg") then
         fs.open(file..".runonceflg", write).close
         shell.run(file, args)
+    end
+end
+
+function dllist(list)
+    for i,fn in ipairs(list) do
+        shell.run("wget", fn)
+    end
+end

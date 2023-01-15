@@ -4,6 +4,9 @@ name = "treefarm"
 directory = "treefarm"
 files = {
     "https://tomquinn04.github.io/ccprojects/treefarm/def",
+    "https://tomquinn04.github.io/ccprojects/treefarm/initpos",
+    "https://tomquinn04.github.io/ccprojects/treefarm/move",
+    "https://tomquinn04.github.io/ccprojects/treefarm/treefarm"
 }
 runonce = "initpos"
 runonceargs = ""
