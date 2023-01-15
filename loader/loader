@@ -11,7 +11,7 @@ function initialsetup()
         shell.run("rm", "../setup")
         shell.run("wget", "https://tomquinn04.github.io/ccprojects/loader/initfiles")
         
-        os.loadAPI("initfiles")
+        os.loadAPI("loader/initfiles")
         dl = initfiles.get()
 
         for i,fn in ipairs(dl) do
