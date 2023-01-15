@@ -7,6 +7,6 @@ files = [
     "https://https://raw.githubusercontent.com/tomquinn04/ccprojects/main/loader/utilities.lua",
 ]
 
-function get():
+function get()
     return files
 end
