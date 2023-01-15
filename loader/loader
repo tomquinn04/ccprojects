@@ -24,9 +24,8 @@ function initialsetup()
 end
 
 function runprogram()
-    os.loadAPI("loader/config")
-    vprogram = config.file
-    os.unloadAPI("loader/config")
+    config = require("config")
+    local vprogram = config.program
     
     os.loadAPI(vprogram.."/def")
     shell.setDir(vprogram)

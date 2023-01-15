@@ -1,3 +1,5 @@
 -- loader/config
 
 program = ""
+
+return { program = program}
