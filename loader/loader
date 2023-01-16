@@ -34,10 +34,12 @@ function runprogram()
     utilities.dellist(def.updatefiles)
     utilities.dllist(def.files)
     utilities.runonce("/"..def.directory.."/"..def.runonce, def.runonceargs)
-    term.clear()
+    
     term.setCursorPos(1,1)
     term.setBackgroundColor(colors.white)
     term.setTextColor(colors.black)
+    term.clear()
+    
     shell.run("/"..def.directory.."/"..def.startup)
     shell.setDir("/")
 end
