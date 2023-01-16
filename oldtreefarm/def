@@ -1,1 +1,19 @@
 -- old tree farm
+
+-- Program Definition File
+
+name = "oldtreefarm"
+directory = "oldtreefarm"
+files = {
+    "https://tomquinn04.github.io/ccprojects/oldtreefarm/def",
+    "https://tomquinn04.github.io/ccprojects/oldtreefarm/atreefarm",
+}
+updatefiles = {
+    "def",
+    "atreefarm",
+}
+runonce = ""
+runonceargs = " "
+startup = "atreefarm"
+
+-- EDIT ABOVE THIS LINE
