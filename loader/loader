@@ -33,7 +33,7 @@ function runprogram()
     shell.setDir(def.directory)
     utilities.dellist(def.updatefiles)
     utilities.dllist(def.files)
-    utilities.runonce(vprogram.."/"..def.runonce, def.runonceargs)
+    utilities.runonce("/"..def.directory.."/"..def.runonce, def.runonceargs)
     shell.run("/"..def.directory.."/"..def.startup)
 end
 
@@ -51,12 +51,12 @@ end
 
 utilities = require("utilities")
 config = require("config")
-if not config.updatesdisabled then
+if config.updatesdisabled == false then
     utilities.update()
     updateloader()
 end
 
-if not config.getprogram() == "TYPE PROGRAM NAME HERE" then runprogram()
+if config.getprogram() ~= "TYPE PROGRAM NAME HERE" then runprogram()
 else
     print("Set program in loader/config")
 end
