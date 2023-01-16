@@ -50,11 +50,12 @@ end
 -- MAIN
 
 utilities = require("utilities")
-if (not args[1] == "noupall" ) or (#args==0) then
-    utilities.update()
-    if (not args[1] == "noup") or (#args==0) then updateloader() end
-end
 config = require("config")
+if not config.updatesdisabled then
+    utilities.update()
+    updateloader()
+end
+
 if not config.getprogram() == "TYPE PROGRAM NAME HERE" then runprogram()
 else
     print("Set program in loader/config")

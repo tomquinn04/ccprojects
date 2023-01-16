@@ -1,6 +1,7 @@
 -- loader/config
 
 program = "TYPE PROGRAM NAME HERE"
+updatesdisabled = false
 
 function getprogram() return program end
 
