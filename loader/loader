@@ -30,11 +30,11 @@ function runprogram()
         shell.run("wget", "https://tomquinn04.github.io/ccprojects/"..vprogram.."/def /"..vprogram.."/def")
     end
     os.loadAPI(vprogram.."/def")
-    shell.setDir(vprogram)
+    shell.setDir(def.directory)
     utilities.dellist(def.updatefiles)
     utilities.dllist(def.files)
     utilities.runonce(vprogram.."/"..def.runonce, def.runonceargs)
-    shell.run(vprogram.."/"..def.startup)
+    shell.run("/"..def.directory.."/"..def.startup)
 end
 
 function updateloader()
