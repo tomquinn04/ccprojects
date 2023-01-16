@@ -1,3 +1,6 @@
+-- STOP AUTOSTART ON STARTUP
+read("Press ENTER once placed on the start point... ")
+
 --{program="aTreeFarm",version="1.04b",date="2018-01-07"}
 ---------------------------------------
 -- aTreeFarm           by Kaikaku
