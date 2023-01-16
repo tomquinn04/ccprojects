@@ -39,6 +39,7 @@ function runprogram()
     term.setBackgroundColor(colors.white)
     term.setTextColor(colors.black)
     shell.run("/"..def.directory.."/"..def.startup)
+    shell.setDir("/")
 end
 
 function updateloader()
