@@ -1,6 +1,6 @@
 -- loader/config
 
-program = ""
+program = "TYPE PROGRAM NAME HERE"
 
 function getprogram() return program end
 
