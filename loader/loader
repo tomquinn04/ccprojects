@@ -54,6 +54,9 @@ if (not args[1] == "noupall" ) or (#args==0) then
     utilities.update()
     if (not args[1] == "noup") or (#args==0) then updateloader() end
 end
-runprogram()
+if not config.getprogram() == "" do runprogram()
+else
+    print("Set program in loader/config")
+end
 
 return {initialsetup = initialsetup}
